@@ -26,7 +26,7 @@ const Navigation = () => {
               key={item.path}
               to={item.path}
               className={({ isActive }) =>
-                `text-sm font-semibold tracking-wide transition-colors duration-300 ${
+                `text-base font-semibold tracking-wide transition-colors duration-300 ${
                   isActive ? 'text-orange-500' : 'text-zinc-400 hover:text-white'
                 }`
               }
@@ -40,7 +40,7 @@ const Navigation = () => {
         <div className="flex items-center justify-end gap-4 w-1/4">
           <Link
             to="/contact"
-            className="hidden lg:flex items-center justify-center px-8 py-2.5 rounded bg-orange-500 text-white text-sm font-bold hover:bg-orange-600 transition-colors shadow-lg hover:shadow-orange-500/20"
+            className="hidden lg:flex items-center justify-center px-8 py-2.5 rounded bg-orange-500 text-white text-base font-bold hover:bg-orange-600 transition-colors shadow-lg hover:shadow-orange-500/20"
           >
             Hire Me
           </Link>

@@ -17,14 +17,14 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-zinc-400 font-sans text-sm mb-1">Hi I am</p>
+            <p className="text-zinc-400 font-sans text-base mb-1">Hi I am</p>
             <h1 className="font-sans font-bold text-4xl md:text-5xl text-zinc-100 mb-1">
               Muhammad Kashif
             </h1>
             <h2 className="font-sans font-bold text-3xl md:text-5xl text-orange-500 tracking-tight leading-tight mb-3">
               Full-Stack Developer <br className="hidden md:block" /> <span className="text-zinc-500 font-serif italic">&amp;</span> AI Engineer
             </h2>
-            <p className="font-sans text-xs md:text-sm text-zinc-400 leading-relaxed font-medium max-w-lg mb-6">
+            <p className="font-sans text-sm md:text-base text-zinc-400 leading-relaxed font-medium max-w-lg mb-6">
               Accomplished Full-Stack Developer with a strong foundation in building scalable web architectures, bridging complex software engineering with emerging AI technologies.
             </p>
           </motion.div>
@@ -61,14 +61,14 @@ export default function Home() {
           >
             <Link 
               to="/contact" 
-              className="px-6 py-2.5 rounded bg-orange-500 text-white font-semibold hover:bg-orange-600 transition-colors shadow-lg hover:shadow-orange-500/20 text-sm"
+              className="px-6 py-2.5 rounded bg-orange-500 text-white font-semibold hover:bg-orange-600 transition-colors shadow-lg hover:shadow-orange-500/20 text-base"
             >
               Hire Me
             </Link>
             <a 
               href="/Muhammad_Kashif_CV.pdf" 
               target="_blank"
-              className="px-6 py-2.5 rounded border border-zinc-600 text-zinc-300 font-semibold hover:text-white hover:border-zinc-400 transition-colors text-sm"
+              className="px-6 py-2.5 rounded border border-zinc-600 text-zinc-300 font-semibold hover:text-white hover:border-zinc-400 transition-colors text-base"
             >
               Download CV
             </a>
@@ -83,17 +83,17 @@ export default function Home() {
           >
             <div className="flex flex-col">
               <span className="text-orange-500 font-bold text-xl mb-0.5">{new Date().getFullYear() - 2023}+</span>
-              <span className="text-zinc-400 text-xs">Experiences</span>
+              <span className="text-zinc-400 text-sm">Experiences</span>
             </div>
             <div className="w-px h-10 bg-zinc-800"></div>
             <div className="flex flex-col">
               <span className="text-orange-500 font-bold text-xl mb-0.5">{projects.length}+</span>
-              <span className="text-zinc-400 text-xs">Project done</span>
+              <span className="text-zinc-400 text-sm">Project done</span>
             </div>
             <div className="w-px h-10 bg-zinc-800"></div>
             <div className="flex flex-col">
               <span className="text-orange-500 font-bold text-xl mb-0.5">15+</span>
-              <span className="text-zinc-400 text-xs">Happy Clients</span>
+              <span className="text-zinc-400 text-sm">Happy Clients</span>
             </div>
           </motion.div>
 
