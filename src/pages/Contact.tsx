@@ -29,46 +29,46 @@ export default function Contact() {
             </p>
 
             <div className="space-y-6">
-              <div className="flex items-center gap-6 group">
-                <div className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center bg-[#1A1A1A] shadow-lg group-hover:border-orange-500/50 transition-all">
-                  <Mail className="w-6 h-6 text-orange-500" />
+              <div className="flex items-center gap-6 group cursor-pointer">
+                <div className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center bg-[#1A1A1A] shadow-lg group-hover:border-orange-500/50 group-hover:bg-orange-500/10 group-hover:-translate-y-1 group-hover:shadow-[0_0_15px_rgba(249,115,22,0.2)] transition-all duration-300">
+                  <Mail className="w-6 h-6 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 <div>
-                  <div className="text-sm text-zinc-500 font-bold mb-1">Email</div>
-                  <a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL || 'mkashifkhanai@gmail.com'}`} className="text-lg text-zinc-100 font-medium hover:text-orange-500 transition-colors">
+                  <div className="text-sm text-zinc-500 font-bold mb-1 group-hover:text-orange-500 transition-colors duration-300">Email</div>
+                  <a href={`mailto:${import.meta.env.VITE_CONTACT_EMAIL || 'mkashifkhanai@gmail.com'}`} className="text-lg text-zinc-100 font-medium transition-colors">
                     {import.meta.env.VITE_CONTACT_EMAIL || 'mkashifkhanai@gmail.com'}
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-6 group">
-                <div className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center bg-[#1A1A1A] shadow-lg group-hover:border-orange-500/50 transition-all">
-                  <Phone className="w-6 h-6 text-orange-500" />
+              <div className="flex items-center gap-6 group cursor-pointer">
+                <div className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center bg-[#1A1A1A] shadow-lg group-hover:border-orange-500/50 group-hover:bg-orange-500/10 group-hover:-translate-y-1 group-hover:shadow-[0_0_15px_rgba(249,115,22,0.2)] transition-all duration-300">
+                  <Phone className="w-6 h-6 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 <div>
-                  <div className="text-sm text-zinc-500 font-bold mb-1">Phone</div>
-                  <a href={`tel:${import.meta.env.VITE_CONTACT_PHONE || '+923055641502'}`} className="text-lg text-zinc-100 font-medium hover:text-orange-500 transition-colors">
+                  <div className="text-sm text-zinc-500 font-bold mb-1 group-hover:text-orange-500 transition-colors duration-300">Phone</div>
+                  <a href={`tel:${import.meta.env.VITE_CONTACT_PHONE || '+923055641502'}`} className="text-lg text-zinc-100 font-medium transition-colors">
                     {import.meta.env.VITE_CONTACT_PHONE || '+92 305 5641502'}
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-6 group">
-                <div className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center bg-[#1A1A1A] shadow-lg group-hover:border-orange-500/50 transition-all">
-                  <MapPin className="w-6 h-6 text-orange-500" />
+              <div className="flex items-center gap-6 group cursor-pointer">
+                <div className="w-14 h-14 rounded-full border border-white/10 flex items-center justify-center bg-[#1A1A1A] shadow-lg group-hover:border-orange-500/50 group-hover:bg-orange-500/10 group-hover:-translate-y-1 group-hover:shadow-[0_0_15px_rgba(249,115,22,0.2)] transition-all duration-300">
+                  <MapPin className="w-6 h-6 text-orange-500 group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 <div>
-                  <div className="text-base text-zinc-500 font-bold mb-1">Location</div>
+                  <div className="text-base text-zinc-500 font-bold mb-1 group-hover:text-orange-500 transition-colors duration-300">Location</div>
                   <div className="text-lg text-zinc-100 font-medium">Lahore, Pakistan</div>
                 </div>
               </div>
 
               {/* Social Links */}
               <div className="flex items-center gap-4 pt-4 border-t border-white/5">
-                <a href={import.meta.env.VITE_GITHUB_URL || '#'} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:text-white hover:border-zinc-500 hover:bg-white/5 transition-all">
+                <a href={import.meta.env.VITE_GITHUB_URL || '#'} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:text-orange-500 hover:border-orange-500/50 hover:bg-orange-500/10 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(249,115,22,0.2)] transition-all duration-300">
                   <Github className="w-5 h-5" />
                 </a>
-                <a href={import.meta.env.VITE_LINKEDIN_URL || '#'} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:text-white hover:border-zinc-500 hover:bg-white/5 transition-all">
+                <a href={import.meta.env.VITE_LINKEDIN_URL || '#'} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:text-orange-500 hover:border-orange-500/50 hover:bg-orange-500/10 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(249,115,22,0.2)] transition-all duration-300">
                   <Linkedin className="w-5 h-5" />
                 </a>
               </div>

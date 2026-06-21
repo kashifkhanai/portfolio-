@@ -45,7 +45,7 @@ export default function Home() {
                 href={social.href} 
                 target="_blank"
                 rel="noreferrer"
-                className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:text-white hover:border-zinc-500 transition-colors"
+                className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:text-orange-500 hover:border-orange-500/50 hover:bg-orange-500/10 hover:-translate-y-1 hover:shadow-[0_0_15px_rgba(249,115,22,0.2)] transition-all duration-300"
               >
                 <social.Icon className="w-4 h-4" />
               </a>
