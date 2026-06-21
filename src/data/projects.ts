@@ -1,30 +1,67 @@
 export const projects = [
   {
-    title: "Hospital Management System (PIMS)",
-    desc: "Developed a comprehensive healthcare platform to streamline hospital operations and patient data management. Engineered a robust backend using AdonisJS and TypeScript for structured data handling.",
-    tags: ["React", "Redux", "AdonisJS", "TypeScript"],
-    link: "#",
-    github: "#"
+    title: "PIMS: Enterprise Hospital Management System",
+    slug: "pims-hospital-management",
+    scopePill: "[ SCOPE: ENTERPRISE CORE // BACKEND LEAD ]",
+    techRibbon: "AdonisJS v6 • Relational MySQL • Strict TS",
+    businessPitch: "A rock-solid healthcare platform built to handle complex patient admissions, doctor schedules, and pharmacy ledgers instantly without ever slowing down or crashing.",
+    deliverables: [
+      "Strict ACID-Compliant 3NF Schemas",
+      "Compile-Time Validated DTO Ingress",
+      "Granular RBAC Permission Matrix"
+    ],
+    ctaLabel: "Inspect Enterprise Architecture"
   },
   {
-    title: "Share Vault & AI Chatbot",
-    desc: "Built a secure file-sharing API featuring link expiry and JWT-based authentication using FastAPI. Developed a high-performance AI chatbot backend with WebSockets and Google Gemini.",
-    tags: ["FastAPI", "MongoDB", "Gemini AI"],
-    link: "#",
-    github: "#"
+    title: "Flux Trade Engine: Live Order Book",
+    slug: "flux-trade-engine",
+    scopePill: "[ SCOPE: OPEN LAB // 100% OWNERSHIP ]",
+    techRibbon: "React 19 • WebSockets • Binance API",
+    businessPitch: "A lightning-fast cryptocurrency trading dashboard rendering live, unmanipulated global market prices to your screen in less than a second.",
+    deliverables: [
+      "Live Binance WebSocket Wire",
+      "Sub-Millisecond DOM Diffing",
+      "Centralized Order-Book Slices"
+    ],
+    ctaLabel: "Inspect Streaming Architecture"
   },
   {
-    title: "Flux Trade Engine",
-    desc: "Developed a real-time cryptocurrency trading dashboard utilizing the Binance WebSocket API. Engineered a high-performance React-based interface to track live market data.",
-    tags: ["React", "WebSockets"],
-    link: "#",
-    github: "#"
+    title: "Smart City Spatial Anomaly AI",
+    slug: "smart-city-spatial-ai",
+    scopePill: "[ SCOPE: R&D CAPSTONE // AI & GIS LEAD ]",
+    techRibbon: "Python • YOLOv8 (ONNX) • PostGIS DB",
+    businessPitch: "Smart spatial software that uses video feeds to automatically detect physical road hazards in real-time, pinning their exact GPS coordinates onto city maps.",
+    deliverables: [
+      "Custom YOLOv8 ONNX Ingestion",
+      "PostGIS Geospatial Mapping",
+      "Automated High-Confidence Dispatch"
+    ],
+    ctaLabel: "Inspect Applied AI Specs"
   },
   {
-    title: "Smart City Issue Detection",
-    desc: "Designed an AI-integrated GIS platform for urban issue tracking. Implemented real-time tracking features and integrated the YOLOv8 Computer Vision model.",
-    tags: ["React", "AI", "YOLOv8"],
-    link: "#",
-    github: "#"
+    title: "Autonomous ETL Data Harvester",
+    slug: "autonomous-etl-scraper",
+    scopePill: "[ SCOPE: ETL ARCHITECTURE // SOLO DEV ]",
+    techRibbon: "Playwright • AdonisJS v6 • BSON DW",
+    businessPitch: "Resilient software bots that legally extract daily pricing data from dozens of global food delivery platforms and organize it into clean BI ledgers.",
+    deliverables: [
+      "Self-Healing Playwright Scraper Bots",
+      "Multi-Platform DOM Sanitization",
+      "Normalized BSON DW Schemas"
+    ],
+    ctaLabel: "Inspect Data Pipeline Specs"
+  },
+  {
+    title: "PrimeVest: Luxury Real Estate Portal",
+    slug: "primevest-luxury-portal",
+    scopePill: "[ SCOPE: SELECTIVE CLIENT // SOLO ARCHITECT ]",
+    techRibbon: "React 19 • Tailwind CSS • TypeScript",
+    businessPitch: "A buttery-smooth, premium property presentation platform designed to feel like an expensive digital magazine for luxury real estate buyers.",
+    deliverables: [
+      "Swiss-Editorial Minimalist UI",
+      "Sub-100ms Core Web Vitals",
+      "Frictionless Spatial Walkthroughs"
+    ],
+    ctaLabel: "Inspect UI/UX Topologies"
   }
 ];
