@@ -1,6 +1,7 @@
 import PageTransition from '../components/PageTransition';
 import { Mail, Phone, MapPin, ArrowRight, Github, Linkedin } from 'lucide-react';
 import { useState } from 'react';
+import { motion } from 'motion/react';
 
 export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -20,7 +21,11 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-6 w-full min-h-[75vh] flex flex-col justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center w-full">
           
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             <h1 className="font-sans text-5xl md:text-7xl font-bold tracking-tight text-zinc-100 mb-4">
               Let's <span className="text-orange-500">Talk</span>
             </h1>
@@ -73,9 +78,14 @@ export default function Contact() {
                 </a>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="p-6 md:p-8 border border-white/5 bg-[#1A1A1A] shadow-2xl rounded-3xl relative overflow-hidden">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="p-6 md:p-8 border border-white/5 bg-[#1A1A1A] shadow-2xl rounded-3xl relative overflow-hidden"
+          >
             
             {submitted ? (
               <div className="h-full flex flex-col items-center justify-center text-center space-y-4 py-12 relative z-10">
@@ -118,7 +128,7 @@ export default function Contact() {
                 </button>
               </form>
             )}
-          </div>
+          </motion.div>
 
         </div>
       </div>

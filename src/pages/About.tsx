@@ -1,4 +1,5 @@
 import PageTransition from '../components/PageTransition';
+import { motion } from 'motion/react';
 
 export default function About() {
   const experiences = [
@@ -62,7 +63,12 @@ export default function About() {
   return (
     <PageTransition>
       <div className="max-w-7xl w-full mx-auto px-6 pt-16 pb-32">
-        <div className="min-h-[85vh] flex flex-col justify-center pb-12">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="min-h-[85vh] flex flex-col justify-center pb-12"
+        >
           <h1 className="font-sans text-5xl md:text-7xl font-bold tracking-tight text-zinc-100 mb-12">
             About <span className="text-orange-500">Me</span>
           </h1>
@@ -81,13 +87,20 @@ export default function About() {
               <strong>The Consolidation Advantage:</strong> I am a one-person full-stack team operating as an end-to-end solo delivery unit. You do not need to coordinate a separate database architect, an AdonisJS backend dev, a React state engineer, a WordPress specialist, a DevOps person, and a Python AI researcher to ship a feature. I own the relational schema, the API ingress, the client DOM diffing, and the inference stream. I have done that consolidation on 30+ client projects, and the fewer hand-offs, the faster (and cheaper) the project ships.
             </p>
           </div>
-        </div>
+        </motion.div>
 
         <section className="mb-24">
           <h2 className="font-sans text-3xl text-zinc-100 mb-8 font-bold">Experience</h2>
           <div className="flex flex-col gap-8">
             {experiences.map((exp, i) => (
-              <div key={i} className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8 border-t border-white/10 pt-8">
+              <motion.div 
+                key={i} 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8 border-t border-white/10 pt-8"
+              >
                 <div className="w-48 text-orange-500 font-mono text-sm shrink-0">{exp.period}</div>
                 <div>
                   <h3 className="text-xl text-zinc-100 font-bold mb-1">{exp.role}</h3>
@@ -95,7 +108,7 @@ export default function About() {
                   <p className="text-zinc-500 leading-relaxed mb-3">{exp.desc}</p>
                   <p className="text-zinc-300 font-medium text-sm">{exp.impact}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </section>
@@ -104,7 +117,14 @@ export default function About() {
           <h2 className="font-sans text-3xl text-zinc-100 mb-8 font-bold">Education</h2>
           <div className="flex flex-col gap-8">
             {education.map((edu, i) => (
-              <div key={i} className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8 border-t border-white/10 pt-8">
+              <motion.div 
+                key={i} 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="flex flex-col md:flex-row md:items-baseline gap-2 md:gap-8 border-t border-white/10 pt-8"
+              >
                 <div className="w-48 text-orange-500 font-mono text-sm shrink-0">{edu.period}</div>
                 <div>
                   <h3 className="text-xl text-zinc-100 font-bold mb-1">{edu.degree}</h3>
@@ -113,7 +133,7 @@ export default function About() {
                   <p className="text-zinc-400 text-sm leading-relaxed mb-1">{edu.coursework}</p>
                   <p className="text-zinc-400 text-sm leading-relaxed">{edu.capstone}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </section>
@@ -122,7 +142,14 @@ export default function About() {
           <h2 className="font-sans text-3xl text-zinc-100 mb-8 font-bold">Skills & Technologies</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skills.map((skill, i) => (
-              <div key={i} className="bg-[#1A1A1A] border border-white/5 p-6 rounded-2xl shadow-lg hover:shadow-orange-500/10 transition-shadow">
+              <motion.div 
+                key={i} 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="bg-[#1A1A1A] border border-white/5 p-6 rounded-2xl shadow-lg hover:shadow-orange-500/10 transition-shadow"
+              >
                 <h3 className="text-lg text-orange-500 font-bold mb-4">{skill.category}</h3>
                 <div className="flex flex-wrap gap-2">
                   {skill.items.map((item, j) => (
@@ -131,13 +158,19 @@ export default function About() {
                     </span>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </section>
 
         {/* CLOSING CALL-TO-ACTION */}
-        <div className="max-w-7xl w-full mx-auto pt-28 pb-20 px-6 text-center flex flex-col items-center relative">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6 }}
+          className="max-w-7xl w-full mx-auto pt-28 pb-20 px-6 text-center flex flex-col items-center relative"
+        >
           <div className="bg-white/[0.03] border border-white/10 px-4 py-1.5 rounded-full text-xs text-zinc-400 font-mono tracking-widest uppercase mb-6 flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-[#00E599] animate-pulse"></span> AVAILABLE FOR DEPLOYMENT
           </div>
@@ -157,7 +190,7 @@ export default function About() {
               Send Email
             </a>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </PageTransition>
