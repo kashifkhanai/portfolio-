@@ -63,25 +63,25 @@ const Navigation = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Dropdown */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-[#111111]/95 backdrop-blur-3xl pt-24 px-6 flex flex-col md:hidden overflow-y-auto"
+            initial={{ opacity: 0, y: -10, scaleY: 0.95 }}
+            animate={{ opacity: 1, y: 0, scaleY: 1 }}
+            exit={{ opacity: 0, y: -10, scaleY: 0.95 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="fixed top-[clamp(4rem,6vw,5.5rem)] left-4 right-4 z-40 md:hidden origin-top"
           >
-            <div className="flex flex-col gap-[clamp(1rem,4vw,1.5rem)] items-center pt-[clamp(2rem,6vw,4rem)]">
+            <div className="bg-[#111111]/95 backdrop-blur-3xl rounded-2xl border border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.8)] p-2 flex flex-col gap-1">
               {navItems.map((item) => (
                 <NavLink
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={({ isActive }) =>
-                    `text-[clamp(1.25rem,4vw,2rem)] font-bold tracking-wider transition-colors duration-300 ${
-                      isActive ? 'text-orange-500' : 'text-zinc-400 hover:text-white'
+                    `px-4 py-[clamp(0.6rem,2vw,0.8rem)] rounded-xl text-[clamp(0.85rem,3vw,1rem)] font-semibold tracking-wide transition-all duration-300 flex items-center ${
+                      isActive ? 'bg-orange-500/10 text-orange-500' : 'text-zinc-400 hover:bg-white/5 hover:text-white'
                     }`
                   }
                 >

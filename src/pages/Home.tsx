@@ -101,7 +101,7 @@ export default function Home() {
         </div>
 
         {/* Right Column (Image) */}
-        <div className="w-[45%] md:w-[50%] flex justify-end items-start md:items-center mt-[clamp(0.5rem,1vw,0rem)] z-10 relative">
+        <div className="w-[45%] md:w-[50%] flex justify-end md:justify-center items-start md:items-center mt-[clamp(0.5rem,1vw,0rem)] z-10 relative">
           
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
