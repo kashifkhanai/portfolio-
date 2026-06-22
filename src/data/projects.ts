@@ -2,7 +2,6 @@ export const projects = [
   {
     title: "PIMS: Enterprise Hospital Management System",
     slug: "pims-hospital-management",
-    scopePill: "[ SCOPE: ENTERPRISE CORE // BACKEND LEAD ]",
     techRibbon: "AdonisJS v6 • Relational MySQL • Strict TS",
     businessPitch: "A rock-solid healthcare platform built to handle complex patient admissions, doctor schedules, and pharmacy ledgers instantly without ever slowing down or crashing.",
     deliverables: [
@@ -15,7 +14,6 @@ export const projects = [
   {
     title: "Flux Trade Engine: Live Order Book",
     slug: "flux-trade-engine",
-    scopePill: "[ SCOPE: OPEN LAB // 100% OWNERSHIP ]",
     techRibbon: "React 19 • WebSockets • Binance API",
     businessPitch: "A lightning-fast cryptocurrency trading dashboard rendering live, unmanipulated global market prices to your screen in less than a second.",
     deliverables: [
@@ -28,7 +26,6 @@ export const projects = [
   {
     title: "Smart City Spatial Anomaly AI",
     slug: "smart-city-spatial-ai",
-    scopePill: "[ SCOPE: R&D CAPSTONE // AI & GIS LEAD ]",
     techRibbon: "Python • YOLOv8 (ONNX) • PostGIS DB",
     businessPitch: "Smart spatial software that uses video feeds to automatically detect physical road hazards in real-time, pinning their exact GPS coordinates onto city maps.",
     deliverables: [
@@ -41,7 +38,6 @@ export const projects = [
   {
     title: "Autonomous ETL Data Harvester",
     slug: "autonomous-etl-scraper",
-    scopePill: "[ SCOPE: ETL ARCHITECTURE // SOLO DEV ]",
     techRibbon: "Playwright • AdonisJS v6 • BSON DW",
     businessPitch: "Resilient software bots that legally extract daily pricing data from dozens of global food delivery platforms and organize it into clean BI ledgers.",
     deliverables: [
@@ -54,7 +50,6 @@ export const projects = [
   {
     title: "PrimeVest: Luxury Real Estate Portal",
     slug: "primevest-luxury-portal",
-    scopePill: "[ SCOPE: SELECTIVE CLIENT // SOLO ARCHITECT ]",
     techRibbon: "React 19 • Tailwind CSS • TypeScript",
     businessPitch: "A buttery-smooth, premium property presentation platform designed to feel like an expensive digital magazine for luxury real estate buyers.",
     deliverables: [

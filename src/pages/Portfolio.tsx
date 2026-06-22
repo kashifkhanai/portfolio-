@@ -7,38 +7,74 @@ import { projects } from '../data/projects';
 export default function Portfolio() {
   return (
     <PageTransition>
-      <div className="max-w-7xl w-full mx-auto px-6 pt-16 pb-32">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-20"
-        >
-          <h1 className="font-sans text-5xl md:text-7xl font-bold tracking-tight text-zinc-100 mb-8">
-            Portfolio <span className="text-orange-500">.</span>
-          </h1>
-          <p className="text-zinc-400 font-sans text-xl leading-relaxed">
-            A selection of my recent work, focusing on full-stack architecture, real-time data handling, and intelligent AI integrations.
-          </p>
-        </motion.div>
+      <div className="max-w-7xl w-full mx-auto px-[clamp(0.5rem,3vw,2rem)] pt-[clamp(0.5rem,2vh,2rem)] pb-[clamp(1rem,4vh,4rem)]">
+        <div className="min-h-[calc(100vh-5rem)] flex flex-col justify-center mb-[clamp(2rem,5vh,5rem)]">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="font-sans text-[clamp(1.5rem,5vw,5rem)] font-bold tracking-tight text-zinc-100 mb-[clamp(0.5rem,2vh,2rem)]">
+              Portfolio <span className="text-orange-500">.</span>
+            </h1>
+            <p className="text-zinc-400 font-sans text-[clamp(0.65rem,1.5vw,1.125rem)] leading-snug md:leading-relaxed max-w-3xl mb-[clamp(1rem,2vh,2rem)]">
+              Explore a curated collection of my work. I build end-to-end software solutions—from complex Hospital Management Systems and real-time Crypto Dashboards, to smart AI integrations like Computer Vision and Chatbots. My focus is on writing reliable code that solves real problems and delivers a seamless experience for every user.
+            </p>
+          </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, i) => (
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <Link 
+              to={`/portfolio/${projects[0].slug}`}
+              className="flex w-full min-h-[clamp(15rem,45vh,35rem)] bg-[#0F131E] border border-white/10 rounded-[clamp(1rem,3vw,1.5rem)] overflow-hidden group hover:border-[#FF5722] transition-all duration-300 flex-row"
+            >
+              <div className="w-[40%] md:w-1/2 bg-zinc-900/40 relative overflow-hidden flex items-center justify-center border-r border-white/5">
+                <img 
+                  src={`/projects/${projects[0].slug}.png`} 
+                  alt={projects[0].title} 
+                  className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" 
+                  onError={(e) => { 
+                    e.currentTarget.style.display = 'none'; 
+                    e.currentTarget.parentElement?.classList.add('bg-gradient-to-br', 'from-zinc-800', 'to-zinc-950'); 
+                  }} 
+                />
+              </div>
+
+              <div className="w-[60%] md:w-1/2 p-[clamp(0.5rem,2vw,2rem)] flex flex-col justify-center">
+                <span className="text-[clamp(0.5rem,1.5vw,0.875rem)] font-mono font-bold text-[#FF5722] tracking-widest uppercase mb-[clamp(0.25rem,1vw,0.5rem)]">{projects[0].techRibbon}</span>
+                <h3 className="text-[clamp(0.875rem,2vw,1.5rem)] font-extrabold text-white mb-[clamp(0.25rem,1vw,0.75rem)] tracking-tight group-hover:text-[#FF5722] transition-colors leading-tight">{projects[0].title}</h3>
+                <p className="text-[clamp(0.55rem,1.5vw,1rem)] text-zinc-300 font-sans leading-snug md:leading-relaxed mb-[clamp(0.5rem,2vw,1rem)]">{projects[0].businessPitch}</p>
+
+                <ul className="space-y-[clamp(0.1rem,0.5vw,0.5rem)] border-l-2 border-[#FF5722]/30 pl-[clamp(0.25rem,1vw,0.75rem)]">
+                  {projects[0].deliverables.map((item, idx) => (
+                    <li key={idx} className="text-[clamp(0.45rem,1.2vw,0.875rem)] font-mono text-zinc-300 flex items-center gap-[clamp(0.25rem,1vw,0.5rem)]">
+                      <span className="text-[#FF5722] shrink-0">▹</span> <span className="truncate">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </Link>
+          </motion.div>
+        </div>
+
+        <div className="grid grid-cols-2 gap-[clamp(0.5rem,2vw,2rem)]">
+          {projects.slice(1).map((project, i) => (
             <motion.div 
               key={i} 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={i === 0 ? "col-span-1 md:col-span-2" : "col-span-1"}
+              className="col-span-1"
             >
               <Link 
                 to={`/portfolio/${project.slug}`}
-                className={`flex w-full h-full bg-[#0F131E] border border-white/10 rounded-3xl overflow-hidden group hover:border-[#FF5722] transition-all duration-300 ${i === 0 ? "flex-col lg:flex-row" : "flex-col"}`}
+                className="flex w-full h-full bg-[#0F131E] border border-white/10 rounded-[clamp(1rem,3vw,1.5rem)] overflow-hidden group hover:border-[#FF5722] transition-all duration-300 flex-col"
               >
-                <div className={i === 0 
-                  ? "w-full lg:w-1/2 aspect-video bg-zinc-900/40 relative overflow-hidden flex items-center justify-center border-b border-white/5 lg:border-b-0 lg:border-r" 
-                  : "aspect-video bg-zinc-900/40 relative overflow-hidden border-b border-white/5"}>
+                <div className="aspect-[2/1] bg-zinc-900/40 relative overflow-hidden border-b border-white/5">
                   <img 
                     src={`/projects/${project.slug}.png`} 
                     alt={project.title} 
@@ -48,20 +84,17 @@ export default function Portfolio() {
                       e.currentTarget.parentElement?.classList.add('bg-gradient-to-br', 'from-zinc-800', 'to-zinc-950'); 
                     }} 
                   />
-                  <span className="absolute top-4 left-4 bg-black/70 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full text-xs font-mono text-zinc-300 uppercase tracking-widest z-10">
-                    {project.scopePill}
-                  </span>
                 </div>
 
-                <div className={i === 0 ? "w-full lg:w-1/2 p-6 md:p-8 flex flex-col flex-grow" : "p-6 md:p-8 flex flex-col flex-grow w-full"}>
-                  <span className="text-sm font-mono font-bold text-[#FF5722] tracking-widest uppercase mb-2">{project.techRibbon}</span>
-                  <h3 className="text-2xl font-extrabold text-white mb-3 tracking-tight group-hover:text-[#FF5722] transition-colors">{project.title}</h3>
-                  <p className="text-base text-zinc-300 font-sans leading-relaxed mb-4">{project.businessPitch}</p>
+                <div className="p-[clamp(0.75rem,2vw,1.5rem)] flex flex-col flex-grow w-full">
+                  <span className="text-[clamp(0.45rem,1.2vw,0.75rem)] font-mono font-bold text-[#FF5722] tracking-widest uppercase mb-[clamp(0.25rem,1vw,0.5rem)]">{project.techRibbon}</span>
+                  <h3 className="text-[clamp(0.75rem,1.5vw,1.25rem)] font-extrabold text-white mb-[clamp(0.25rem,1vw,0.5rem)] tracking-tight group-hover:text-[#FF5722] transition-colors leading-tight">{project.title}</h3>
+                  <p className="text-[clamp(0.5rem,1.2vw,0.875rem)] text-zinc-400 font-sans leading-snug mb-[clamp(0.5rem,1.5vw,1rem)] line-clamp-2">{project.businessPitch}</p>
 
-                  <ul className="space-y-2 mb-2 border-l-2 border-[#FF5722]/30 pl-3">
+                  <ul className="space-y-[clamp(0.1rem,0.5vw,0.25rem)] border-l-2 border-[#FF5722]/30 pl-[clamp(0.25rem,1vw,0.5rem)] mt-auto">
                     {project.deliverables.map((item, idx) => (
-                      <li key={idx} className="text-sm font-mono text-zinc-300 flex items-center gap-2">
-                        <span className="text-[#FF5722]">▹</span> {item}
+                      <li key={idx} className="text-[clamp(0.45rem,1vw,0.75rem)] font-mono text-zinc-400 flex items-center gap-[clamp(0.25rem,1vw,0.5rem)]">
+                        <span className="text-[#FF5722] shrink-0">▹</span> <span className="truncate">{item}</span>
                       </li>
                     ))}
                   </ul>
