@@ -9,9 +9,9 @@ export default function Home() {
     <PageTransition>
       <div className="w-full max-w-7xl mx-auto px-[clamp(1rem,3vw,1.5rem)] relative pt-[clamp(1.5rem,4vw,3rem)] pb-[clamp(1rem,2vw,1rem)] flex flex-col">
 
-        <div className="flex flex-row items-start lg:items-center justify-between w-full">
+        <div className="flex flex-row items-start md:items-center justify-between w-full">
           {/* Left Column (Content) */}
-          <div className="w-[55%] lg:w-1/2 flex flex-col items-start z-10 pr-[clamp(0.5rem,2vw,0rem)]">
+          <div className="w-[55%] md:w-[50%] flex flex-col items-start z-10 pr-[clamp(0.5rem,2vw,0rem)]">
           
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -19,10 +19,10 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-zinc-400 font-sans text-[clamp(0.6rem,1.2vw,1rem)] mb-[clamp(0.1rem,0.5vw,0.25rem)]">Hi I am</p>
-            <h1 className="font-sans font-bold text-[clamp(1.25rem,3.5vw,3rem)] lg:text-[3.5rem] text-zinc-100 mb-[clamp(0.1rem,0.5vw,0.25rem)]">
+            <h1 className="font-sans font-bold text-[clamp(1.25rem,4vw,3.5rem)] text-zinc-100 mb-[clamp(0.1rem,0.5vw,0.25rem)]">
               Muhammad Kashif
             </h1>
-            <h2 className="font-sans font-bold text-[clamp(0.85rem,2.8vw,2.5rem)] lg:text-[3rem] text-orange-500 tracking-tight leading-tight mb-[clamp(0.5rem,1.5vw,1rem)]">
+            <h2 className="font-sans font-bold text-[clamp(0.85rem,3vw,3rem)] text-orange-500 tracking-tight leading-tight mb-[clamp(0.5rem,1.5vw,1rem)]">
               Full-Stack Developer <br className="hidden md:block" /> <span className="text-zinc-500 font-serif italic">&amp;</span> AI Engineer
             </h2>
             <p className="font-sans text-[clamp(0.55rem,1.2vw,1rem)] text-zinc-400 leading-relaxed font-medium max-w-lg mb-[clamp(1rem,3vw,1.5rem)]">
@@ -101,7 +101,7 @@ export default function Home() {
         </div>
 
         {/* Right Column (Image) */}
-        <div className="w-[45%] lg:w-1/2 flex justify-end items-start lg:items-center mt-[clamp(0.5rem,1vw,0rem)] z-10 relative">
+        <div className="w-[45%] md:w-[50%] flex justify-end items-start md:items-center mt-[clamp(0.5rem,1vw,0rem)] z-10 relative">
           
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
