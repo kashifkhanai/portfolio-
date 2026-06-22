@@ -18,7 +18,7 @@ export default function Contact() {
 
   return (
     <PageTransition>
-      <div className="max-w-7xl mx-auto px-[clamp(0.5rem,3vw,2rem)] w-full min-h-[75vh] flex flex-col justify-center">
+      <div className="max-w-7xl mx-auto px-[clamp(0.5rem,3vw,2rem)] w-full flex flex-col justify-center py-[clamp(0.5rem,2vh,2rem)]">
         <div className="flex flex-row items-start md:items-center justify-between w-full">
           
           <motion.div
@@ -27,16 +27,16 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="w-[40%] md:w-[45%] flex flex-col items-start z-10 pr-[clamp(0.25rem,2vw,1rem)]"
           >
-            <h1 className="font-sans text-[clamp(1.5rem,4vw,4.5rem)] font-bold tracking-tight text-zinc-100 mb-[clamp(0.25rem,1.2vw,1rem)]">
+            <h1 className="font-sans text-[clamp(1.5rem,min(4vw,6vh),4.5rem)] font-bold tracking-tight text-zinc-100 mb-[clamp(0.25rem,min(1.2vw,1.5vh),1rem)]">
               Let's <span className="text-orange-500">Talk</span>
             </h1>
-            <p className="text-zinc-400 font-sans text-[clamp(0.55rem,1.2vw,1.125rem)] leading-relaxed mb-[clamp(0.75rem,2.5vw,1.75rem)] max-w-md">
+            <p className="text-zinc-400 font-sans text-[clamp(0.55rem,min(1.2vw,2vh),1.125rem)] leading-relaxed mb-[clamp(0.5rem,min(2.5vw,2.5vh),1.75rem)] max-w-md">
               Available for strategic opportunities as a Full-Stack Developer & AI Engineer. Whether you have a complex enterprise project or want to integrate cutting-edge AI, let's connect and build something exceptional.
             </p>
 
-            <div className="flex flex-col gap-[clamp(0.5rem,2vw,1.5rem)] w-full">
+            <div className="flex flex-col gap-[clamp(0.35rem,min(2vw,2vh),1.5rem)] w-full">
               <div className="flex items-center gap-[clamp(0.3rem,1vw,1.25rem)] group cursor-pointer w-full">
-                <div className="w-[clamp(1.2rem,3vw,3.5rem)] h-[clamp(1.2rem,3vw,3.5rem)] shrink-0 rounded-full border border-white/10 flex items-center justify-center bg-[#1A1A1A] shadow-lg group-hover:border-orange-500/50 group-hover:bg-orange-500/10 group-hover:-translate-y-1 transition-all duration-300">
+                <div className="w-[clamp(1.2rem,min(3vw,4vh),3.5rem)] h-[clamp(1.2rem,min(3vw,4vh),3.5rem)] shrink-0 rounded-full border border-white/10 flex items-center justify-center bg-[#1A1A1A] shadow-lg group-hover:border-orange-500/50 group-hover:bg-orange-500/10 group-hover:-translate-y-1 transition-all duration-300">
                   <Mail className="w-[clamp(0.6rem,1.5vw,1.5rem)] h-[clamp(0.6rem,1.5vw,1.5rem)] text-orange-500 group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 <div className="overflow-hidden flex-1">
@@ -48,7 +48,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-[clamp(0.3rem,1vw,1.25rem)] group cursor-pointer w-full">
-                <div className="w-[clamp(1.2rem,3vw,3.5rem)] h-[clamp(1.2rem,3vw,3.5rem)] shrink-0 rounded-full border border-white/10 flex items-center justify-center bg-[#1A1A1A] shadow-lg group-hover:border-orange-500/50 group-hover:bg-orange-500/10 group-hover:-translate-y-1 transition-all duration-300">
+                <div className="w-[clamp(1.2rem,min(3vw,4vh),3.5rem)] h-[clamp(1.2rem,min(3vw,4vh),3.5rem)] shrink-0 rounded-full border border-white/10 flex items-center justify-center bg-[#1A1A1A] shadow-lg group-hover:border-orange-500/50 group-hover:bg-orange-500/10 group-hover:-translate-y-1 transition-all duration-300">
                   <Phone className="w-[clamp(0.6rem,1.5vw,1.5rem)] h-[clamp(0.6rem,1.5vw,1.5rem)] text-orange-500 group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 <div className="overflow-hidden flex-1">
@@ -60,7 +60,7 @@ export default function Contact() {
               </div>
 
               <div className="flex items-center gap-[clamp(0.3rem,1vw,1.25rem)] group cursor-pointer w-full">
-                <div className="w-[clamp(1.2rem,3vw,3.5rem)] h-[clamp(1.2rem,3vw,3.5rem)] shrink-0 rounded-full border border-white/10 flex items-center justify-center bg-[#1A1A1A] shadow-lg group-hover:border-orange-500/50 group-hover:bg-orange-500/10 group-hover:-translate-y-1 transition-all duration-300">
+                <div className="w-[clamp(1.2rem,min(3vw,4vh),3.5rem)] h-[clamp(1.2rem,min(3vw,4vh),3.5rem)] shrink-0 rounded-full border border-white/10 flex items-center justify-center bg-[#1A1A1A] shadow-lg group-hover:border-orange-500/50 group-hover:bg-orange-500/10 group-hover:-translate-y-1 transition-all duration-300">
                   <MapPin className="w-[clamp(0.6rem,1.5vw,1.5rem)] h-[clamp(0.6rem,1.5vw,1.5rem)] text-orange-500 group-hover:scale-110 transition-transform duration-300" />
                 </div>
                 <div className="overflow-hidden flex-1">
@@ -85,7 +85,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="w-[60%] md:w-[55%] p-[clamp(0.75rem,2vw,2rem)] border border-white/5 bg-[#1A1A1A] shadow-2xl rounded-[clamp(0.75rem,2vw,1.5rem)] relative overflow-hidden flex flex-col justify-center z-10 ml-[clamp(0.25rem,2vw,1rem)]"
+            className="w-[60%] md:w-[55%] p-[clamp(0.5rem,min(2vw,2.5vh),2rem)] border border-white/5 bg-[#1A1A1A] shadow-2xl rounded-[clamp(0.75rem,2vw,1.5rem)] relative overflow-hidden flex flex-col justify-center z-10 ml-[clamp(0.25rem,2vw,1rem)]"
           >
             
             {submitted ? (
@@ -102,29 +102,29 @@ export default function Contact() {
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-[clamp(0.5rem,1.5vw,1.25rem)] relative z-10">
-                <div className="flex flex-col xl:flex-row gap-[clamp(0.5rem,1.5vw,1.25rem)] w-full">
+              <form onSubmit={handleSubmit} className="flex flex-col gap-[clamp(0.35rem,min(1.5vw,1.5vh),1.25rem)] relative z-10">
+                <div className="flex flex-col xl:flex-row gap-[clamp(0.35rem,min(1.5vw,1.5vh),1.25rem)] w-full">
                   <div className="flex flex-col gap-[clamp(0.1rem,0.8vw,0.375rem)] w-full xl:w-1/2">
                     <label htmlFor="name" className="text-[clamp(0.5rem,1vw,0.875rem)] font-bold text-zinc-400">Name</label>
-                    <input required type="text" id="name" className="w-full bg-[#111111] border border-white/10 rounded-[clamp(0.375rem,1.2vw,0.75rem)] px-[clamp(0.5rem,1.5vw,1rem)] py-[clamp(0.375rem,1vw,0.875rem)] text-zinc-100 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all shadow-sm placeholder:text-zinc-600 text-[clamp(0.5rem,1vw,0.875rem)]" placeholder="John Doe" />
+                    <input required type="text" id="name" className="w-full bg-[#111111] border border-white/10 rounded-[clamp(0.375rem,1.2vw,0.75rem)] px-[clamp(0.5rem,1.5vw,1rem)] py-[clamp(0.25rem,min(1vw,1.5vh),0.875rem)] text-zinc-100 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all shadow-sm placeholder:text-zinc-600 text-[clamp(0.5rem,min(1vw,1.5vh),0.875rem)]" placeholder="John Doe" />
                   </div>
                   <div className="flex flex-col gap-[clamp(0.1rem,0.8vw,0.375rem)] w-full xl:w-1/2">
                     <label htmlFor="email" className="text-[clamp(0.5rem,1vw,0.875rem)] font-bold text-zinc-400">Email</label>
-                    <input required type="email" id="email" className="w-full bg-[#111111] border border-white/10 rounded-[clamp(0.375rem,1.2vw,0.75rem)] px-[clamp(0.5rem,1.5vw,1rem)] py-[clamp(0.375rem,1vw,0.875rem)] text-zinc-100 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all shadow-sm placeholder:text-zinc-600 text-[clamp(0.5rem,1vw,0.875rem)]" placeholder="john@example.com" />
+                    <input required type="email" id="email" className="w-full bg-[#111111] border border-white/10 rounded-[clamp(0.375rem,1.2vw,0.75rem)] px-[clamp(0.5rem,1.5vw,1rem)] py-[clamp(0.25rem,min(1vw,1.5vh),0.875rem)] text-zinc-100 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all shadow-sm placeholder:text-zinc-600 text-[clamp(0.5rem,min(1vw,1.5vh),0.875rem)]" placeholder="john@example.com" />
                   </div>
                 </div>
                 
                 <div className="flex flex-col gap-[clamp(0.1rem,0.8vw,0.375rem)]">
                   <label htmlFor="subject" className="text-[clamp(0.5rem,1vw,0.875rem)] font-bold text-zinc-400">Subject</label>
-                  <input required type="text" id="subject" className="w-full bg-[#111111] border border-white/10 rounded-[clamp(0.375rem,1.2vw,0.75rem)] px-[clamp(0.5rem,1.5vw,1rem)] py-[clamp(0.375rem,1vw,0.875rem)] text-zinc-100 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all shadow-sm placeholder:text-zinc-600 text-[clamp(0.5rem,1vw,0.875rem)]" placeholder="How can I help?" />
+                  <input required type="text" id="subject" className="w-full bg-[#111111] border border-white/10 rounded-[clamp(0.375rem,1.2vw,0.75rem)] px-[clamp(0.5rem,1.5vw,1rem)] py-[clamp(0.25rem,min(1vw,1.5vh),0.875rem)] text-zinc-100 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all shadow-sm placeholder:text-zinc-600 text-[clamp(0.5rem,min(1vw,1.5vh),0.875rem)]" placeholder="How can I help?" />
                 </div>
 
                 <div className="flex flex-col gap-[clamp(0.1rem,0.8vw,0.375rem)]">
                   <label htmlFor="message" className="text-[clamp(0.5rem,1vw,0.875rem)] font-bold text-zinc-400">Message</label>
-                  <textarea required id="message" rows={4} className="w-full bg-[#111111] border border-white/10 rounded-[clamp(0.375rem,1.2vw,0.75rem)] px-[clamp(0.5rem,1.5vw,1rem)] py-[clamp(0.375rem,1vw,0.875rem)] text-zinc-100 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all shadow-sm resize-none placeholder:text-zinc-600 text-[clamp(0.5rem,1vw,0.875rem)]" placeholder="Your message here..."></textarea>
+                  <textarea required id="message" rows={3} className="w-full bg-[#111111] border border-white/10 rounded-[clamp(0.375rem,1.2vw,0.75rem)] px-[clamp(0.5rem,1.5vw,1rem)] py-[clamp(0.25rem,min(1vw,1.5vh),0.875rem)] text-zinc-100 focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 transition-all shadow-sm resize-none placeholder:text-zinc-600 text-[clamp(0.5rem,min(1vw,1.5vh),0.875rem)]" placeholder="Your message here..."></textarea>
                 </div>
 
-                <button disabled={isSubmitting} type="submit" className="w-full bg-orange-500 text-white font-bold tracking-wide hover:bg-orange-600 transition-all py-[clamp(0.5rem,1.2vw,1rem)] mt-[clamp(0.25rem,0.8vw,0.75rem)] rounded-[clamp(0.375rem,1.2vw,0.75rem)] flex items-center justify-center gap-[clamp(0.25rem,0.8vw,0.5rem)] disabled:opacity-70 shadow-lg hover:shadow-orange-500/20 hover:-translate-y-0.5 text-[clamp(0.6rem,1.2vw,1rem)]">
+                <button disabled={isSubmitting} type="submit" className="w-full bg-orange-500 text-white font-bold tracking-wide hover:bg-orange-600 transition-all py-[clamp(0.375rem,min(1.2vw,2vh),1rem)] mt-[clamp(0.125rem,min(0.8vw,1vh),0.75rem)] rounded-[clamp(0.375rem,1.2vw,0.75rem)] flex items-center justify-center gap-[clamp(0.25rem,0.8vw,0.5rem)] disabled:opacity-70 shadow-lg hover:shadow-orange-500/20 hover:-translate-y-0.5 text-[clamp(0.6rem,min(1.2vw,2vh),1rem)]">
                   {isSubmitting ? 'Sending...' : 'Send Message'} <ArrowRight className="w-[clamp(0.75rem,1.2vw,1.25rem)] h-[clamp(0.75rem,1.2vw,1.25rem)]" />
                 </button>
               </form>

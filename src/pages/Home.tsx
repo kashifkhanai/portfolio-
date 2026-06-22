@@ -7,7 +7,7 @@ import { projects } from '../data/projects';
 export default function Home() {
   return (
     <PageTransition>
-      <div className="w-full max-w-7xl mx-auto px-[clamp(1rem,3vw,1.5rem)] relative pt-[clamp(1.5rem,4vw,3rem)] pb-[clamp(1rem,2vw,1rem)] flex flex-col">
+      <div className="w-full max-w-7xl mx-auto px-[clamp(1rem,3vw,1.5rem)] relative pt-[clamp(0.5rem,min(3vw,3vh),0rem)] pb-[clamp(0.5rem,min(2vw,2vh),1rem)] flex flex-col justify-center flex-1 h-full">
 
         <div className="flex flex-row items-start md:items-center justify-between w-full">
           {/* Left Column (Content) */}
@@ -19,13 +19,13 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <p className="text-zinc-400 font-sans text-[clamp(0.6rem,1.2vw,1rem)] mb-[clamp(0.1rem,0.5vw,0.25rem)]">Hi I am</p>
-            <h1 className="font-sans font-bold text-[clamp(1.25rem,4vw,3.5rem)] text-zinc-100 mb-[clamp(0.1rem,0.5vw,0.25rem)]">
+            <h1 className="font-sans font-bold text-[clamp(1.25rem,min(4vw,6vh),3.5rem)] text-zinc-100 mb-[clamp(0.1rem,0.5vh,0.25rem)]">
               Muhammad Kashif
             </h1>
-            <h2 className="font-sans font-bold text-[clamp(0.85rem,3vw,3rem)] text-orange-500 tracking-tight leading-tight mb-[clamp(0.5rem,1.5vw,1rem)]">
+            <h2 className="font-sans font-bold text-[clamp(0.85rem,min(3vw,5vh),3rem)] text-orange-500 tracking-tight leading-tight mb-[clamp(0.25rem,min(1.5vw,2vh),1rem)]">
               Full-Stack Developer <br className="hidden md:block" /> <span className="text-zinc-500 font-serif italic">&amp;</span> AI Engineer
             </h2>
-            <p className="font-sans text-[clamp(0.55rem,1.2vw,1rem)] text-zinc-400 leading-relaxed font-medium max-w-lg mb-[clamp(1rem,3vw,1.5rem)]">
+            <p className="font-sans text-[clamp(0.55rem,min(1.2vw,2vh),1rem)] text-zinc-400 leading-relaxed font-medium max-w-lg mb-[clamp(0.5rem,min(3vw,3vh),1.5rem)]">
               Accomplished Full-Stack Developer with a strong foundation in building scalable web architectures, bridging complex software engineering with emerging AI technologies.
             </p>
           </motion.div>
@@ -35,7 +35,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex items-center gap-[clamp(0.5rem,1.5vw,1rem)] mb-[clamp(1rem,2vw,1.5rem)]"
+            className="flex items-center gap-[clamp(0.5rem,1.5vw,1rem)] mb-[clamp(0.5rem,min(2vw,2vh),1.5rem)]"
           >
             {[
               { Icon: Github, href: import.meta.env.VITE_GITHUB_URL || '#' },
@@ -58,7 +58,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap items-center gap-[clamp(0.5rem,1.5vw,1rem)] mb-[clamp(1.5rem,3vw,2rem)]"
+            className="flex flex-wrap items-center gap-[clamp(0.5rem,1.5vw,1rem)] mb-[clamp(0.5rem,min(3vw,3vh),2rem)]"
           >
             <Link 
               to="/contact" 
@@ -80,28 +80,28 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-[#1A1A1A] rounded-[clamp(0.375rem,1vw,0.75rem)] p-[clamp(0.5rem,2vw,1.5rem)] flex items-center gap-[clamp(0.375rem,2vw,2.5rem)] border border-white/5 shadow-xl md:shadow-2xl w-fit"
+            className="bg-[#1A1A1A] rounded-[clamp(0.375rem,1vw,0.75rem)] px-[clamp(0.5rem,min(2vw,2vh),1.5rem)] py-[clamp(0.25rem,min(1vw,1.5vh),0.75rem)] flex items-center gap-[clamp(0.375rem,min(2vw,2vh),2rem)] border border-white/5 shadow-xl md:shadow-2xl w-fit"
           >
             <div className="flex flex-col items-center lg:items-start">
-              <span className="text-orange-500 font-bold text-[clamp(0.6rem,1.5vw,1.25rem)] mb-[clamp(0px,0.2vw,0.125rem)] leading-none">{new Date().getFullYear() - 2023}+</span>
-              <span className="text-zinc-400 text-[clamp(0.375rem,0.8vw,0.875rem)] leading-tight">Experiences</span>
+              <span className="text-orange-500 font-bold text-[clamp(0.6rem,min(1.5vw,3vh),1.125rem)] mb-[clamp(0px,0.2vw,0.125rem)] leading-none">{new Date().getFullYear() - 2023}+</span>
+              <span className="text-zinc-400 text-[clamp(0.375rem,min(0.8vw,1.5vh),0.75rem)] leading-tight">Experiences</span>
             </div>
-            <div className="w-px h-[clamp(1.25rem,3vw,2.5rem)] bg-zinc-800"></div>
+            <div className="w-px h-[clamp(1rem,min(3vw,3vh),1.75rem)] bg-zinc-800"></div>
             <div className="flex flex-col items-center lg:items-start">
-              <span className="text-orange-500 font-bold text-[clamp(0.6rem,1.5vw,1.25rem)] mb-[clamp(0px,0.2vw,0.125rem)] leading-none">{projects.length}+</span>
-              <span className="text-zinc-400 text-[clamp(0.375rem,0.8vw,0.875rem)] leading-tight whitespace-nowrap">Project done</span>
+              <span className="text-orange-500 font-bold text-[clamp(0.6rem,min(1.5vw,3vh),1.125rem)] mb-[clamp(0px,0.2vw,0.125rem)] leading-none">{projects.length}+</span>
+              <span className="text-zinc-400 text-[clamp(0.375rem,min(0.8vw,1.5vh),0.75rem)] leading-tight whitespace-nowrap">Project done</span>
             </div>
-            <div className="w-px h-[clamp(1.25rem,3vw,2.5rem)] bg-zinc-800"></div>
+            <div className="w-px h-[clamp(1rem,min(3vw,3vh),1.75rem)] bg-zinc-800"></div>
             <div className="flex flex-col items-center lg:items-start">
-              <span className="text-orange-500 font-bold text-[clamp(0.6rem,1.5vw,1.25rem)] mb-[clamp(0px,0.2vw,0.125rem)] leading-none">15+</span>
-              <span className="text-zinc-400 text-[clamp(0.375rem,0.8vw,0.875rem)] leading-tight whitespace-nowrap">Happy Clients</span>
+              <span className="text-orange-500 font-bold text-[clamp(0.6rem,min(1.5vw,3vh),1.125rem)] mb-[clamp(0px,0.2vw,0.125rem)] leading-none">15+</span>
+              <span className="text-zinc-400 text-[clamp(0.375rem,min(0.8vw,1.5vh),0.75rem)] leading-tight whitespace-nowrap">Happy Clients</span>
             </div>
           </motion.div>
 
         </div>
 
         {/* Right Column (Image) */}
-        <div className="w-[45%] md:w-[50%] flex justify-end md:justify-center items-start md:items-center mt-[clamp(0.5rem,1vw,0rem)] z-10 relative">
+        <div className="w-[45%] md:w-[50%] flex justify-end md:justify-center items-start md:items-center mt-[clamp(0.25rem,1vh,0rem)] z-10 relative">
           
           <motion.div 
             initial={{ opacity: 0, scale: 0.9 }}
@@ -110,10 +110,10 @@ export default function Home() {
             className="relative"
           >
             {/* The Dark Circular Background Shape */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[clamp(140px,38vw,500px)] h-[clamp(140px,38vw,500px)] rounded-full bg-[#1A1A1A] -z-10"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[clamp(140px,min(38vw,55vh),500px)] h-[clamp(140px,min(38vw,55vh),500px)] rounded-full bg-[#1A1A1A] -z-10"></div>
             
             {/* The Image Layer */}
-            <div className="w-[clamp(120px,33vw,400px)] h-[clamp(150px,41vw,500px)] relative overflow-hidden rounded-b-full">
+            <div className="w-[clamp(120px,min(33vw,50vh),400px)] h-[clamp(150px,min(41vw,60vh),500px)] relative overflow-hidden rounded-b-full">
               {/* Optional: Add a subtle gradient fade at the bottom of the image so it blends into the dark background */}
               <div className="absolute inset-x-0 bottom-0 h-[clamp(3rem,8vw,8rem)] bg-gradient-to-t from-[#111111] to-transparent z-10 pointer-events-none"></div>
               
