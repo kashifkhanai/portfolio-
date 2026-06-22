@@ -7,14 +7,14 @@ import { projects } from '../data/projects';
 export default function Portfolio() {
   return (
     <PageTransition>
-      <div className="max-w-7xl w-full mx-auto px-[clamp(0.5rem,3vw,2rem)] pt-[clamp(0.5rem,2vh,2rem)] pb-[clamp(1rem,4vh,4rem)]">
-        <div className="min-h-[calc(100vh-5rem)] flex flex-col justify-center mb-[clamp(2rem,5vh,5rem)]">
+      <div className="max-w-7xl w-full mx-auto px-[clamp(0.5rem,3vw,2rem)] pb-[clamp(1rem,min(4vw,4vh),4rem)]">
+        <div className="min-h-[calc(100vh-5rem)] flex flex-col justify-center mb-[clamp(2rem,min(5vw,5vh),5rem)]">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-sans text-[clamp(1.5rem,5vw,5rem)] font-bold tracking-tight text-zinc-100 mb-[clamp(0.5rem,2vh,2rem)]">
+            <h1 className="font-sans text-[clamp(1.5rem,min(5vw,8vh),5rem)] font-bold tracking-tight text-zinc-100 mb-[clamp(0.5rem,min(2vw,2vh),2rem)]">
               Portfolio <span className="text-orange-500">.</span>
             </h1>
             <p className="text-zinc-400 font-sans text-[clamp(0.65rem,1.5vw,1.125rem)] leading-snug md:leading-relaxed max-w-3xl mb-[clamp(1rem,2vh,2rem)]">
@@ -29,7 +29,7 @@ export default function Portfolio() {
           >
             <Link 
               to={`/portfolio/${projects[0].slug}`}
-              className="flex w-full min-h-[clamp(15rem,45vh,35rem)] bg-[#0F131E] border border-white/10 rounded-[clamp(1rem,3vw,1.5rem)] overflow-hidden group hover:border-[#FF5722] transition-all duration-300 flex-row"
+              className="flex w-full min-h-[clamp(15rem,min(45vw,45vh),35rem)] bg-[#0F131E] border border-white/10 rounded-[clamp(1rem,3vw,1.5rem)] overflow-hidden group hover:border-[#FF5722] transition-all duration-300 flex-row"
             >
               <div className="w-[40%] md:w-1/2 bg-zinc-900/40 relative overflow-hidden flex items-center justify-center border-r border-white/5">
                 <img 
@@ -60,7 +60,7 @@ export default function Portfolio() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-2 gap-[clamp(0.5rem,2vw,2rem)]">
+        <div className="grid grid-cols-2 gap-[clamp(0.5rem,min(2vw,3vh),2rem)]">
           {projects.slice(1).map((project, i) => (
             <motion.div 
               key={i} 

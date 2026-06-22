@@ -62,14 +62,14 @@ export default function About() {
 
   return (
     <PageTransition>
-      <div className="max-w-7xl mx-auto px-[clamp(0.5rem,3vw,2rem)] pt-[clamp(0.5rem,2vh,2rem)] pb-[clamp(1rem,4vh,4rem)] w-full">
+      <div className="max-w-7xl mx-auto px-[clamp(0.5rem,3vw,2rem)] pb-[clamp(1rem,min(4vw,4vh),4rem)] w-full">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="min-h-[calc(100vh-6rem)] flex flex-col justify-center"
+          className="min-h-[calc(100vh-5rem)] flex flex-col justify-center"
         >
-          <h1 className="font-sans text-[clamp(1.5rem,5vw,5rem)] font-bold tracking-tight text-zinc-100 mb-[clamp(0.5rem,2vh,2rem)]">
+          <h1 className="font-sans text-[clamp(1.5rem,min(5vw,8vh),5rem)] font-bold tracking-tight text-zinc-100 mb-[clamp(0.5rem,min(2vw,2vh),2rem)]">
             About <span className="text-orange-500">Me</span>
           </h1>
           
@@ -89,9 +89,9 @@ export default function About() {
           </div>
         </motion.div>
 
-        <section className="mb-[clamp(3rem,8vw,6rem)]">
-          <h2 className="font-sans text-[clamp(1.5rem,3vw,2.25rem)] text-zinc-100 mb-[clamp(1.5rem,4vw,2rem)] font-bold">Experience</h2>
-          <div className="flex flex-col gap-[clamp(1.5rem,4vw,2rem)]">
+        <section className="mb-[clamp(2rem,min(6vw,8vh),6rem)]">
+          <h2 className="font-sans text-[clamp(1.5rem,min(3vw,4vh),2.25rem)] text-zinc-100 mb-[clamp(1rem,min(3vw,4vh),2rem)] font-bold">Experience</h2>
+          <div className="flex flex-col gap-[clamp(1.5rem,min(3vw,4vh),2rem)]">
             {experiences.map((exp, i) => (
               <motion.div 
                 key={i} 
@@ -113,9 +113,9 @@ export default function About() {
           </div>
         </section>
 
-        <section className="mb-[clamp(3rem,8vw,6rem)]">
-          <h2 className="font-sans text-[clamp(1.5rem,3vw,2.25rem)] text-zinc-100 mb-[clamp(1.5rem,4vw,2rem)] font-bold">Education</h2>
-          <div className="flex flex-col gap-[clamp(1.5rem,4vw,2rem)]">
+        <section className="mb-[clamp(2rem,min(6vw,8vh),6rem)]">
+          <h2 className="font-sans text-[clamp(1.5rem,min(3vw,4vh),2.25rem)] text-zinc-100 mb-[clamp(1rem,min(3vw,4vh),2rem)] font-bold">Education</h2>
+          <div className="flex flex-col gap-[clamp(1.5rem,min(3vw,4vh),2rem)]">
             {education.map((edu, i) => (
               <motion.div 
                 key={i} 
@@ -139,8 +139,8 @@ export default function About() {
         </section>
 
         <section>
-          <h2 className="font-sans text-[clamp(1.5rem,3vw,2.25rem)] text-zinc-100 mb-[clamp(1.5rem,4vw,2rem)] font-bold">Skills & Technologies</h2>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-[clamp(0.5rem,3vw,2rem)]">
+          <h2 className="font-sans text-[clamp(1.5rem,min(3vw,4vh),2.25rem)] text-zinc-100 mb-[clamp(1rem,min(3vw,4vh),2rem)] font-bold">Skills & Technologies</h2>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-[clamp(0.5rem,min(2vw,3vh),2rem)]">
             {skills.map((skill, i) => (
               <motion.div 
                 key={i} 
@@ -169,12 +169,12 @@ export default function About() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6 }}
-          className="max-w-7xl w-full mx-auto pt-[clamp(4rem,10vw,7rem)] pb-[clamp(3rem,8vw,5rem)] px-[clamp(1rem,4vw,1.5rem)] text-center flex flex-col items-center relative"
+          className="max-w-7xl w-full mx-auto pt-[clamp(3rem,min(8vw,10vh),7rem)] pb-[clamp(2rem,min(6vw,8vh),5rem)] px-[clamp(1rem,4vw,1.5rem)] text-center flex flex-col items-center relative"
         >
-          <div className="bg-white/[0.03] border border-white/10 px-[clamp(0.5rem,2vw,1rem)] py-[clamp(0.25rem,1vw,0.375rem)] rounded-full text-[clamp(0.5rem,1.5vw,0.75rem)] text-zinc-400 font-mono tracking-widest uppercase mb-[clamp(1rem,3vw,1.5rem)] flex items-center gap-[clamp(0.25rem,1vw,0.5rem)]">
+          <div className="bg-white/[0.03] border border-white/10 px-[clamp(0.5rem,2vw,1rem)] py-[clamp(0.25rem,1vw,0.375rem)] rounded-full text-[clamp(0.5rem,1.5vw,0.75rem)] text-zinc-400 font-mono tracking-widest uppercase mb-[clamp(0.75rem,min(2vw,3vh),1.5rem)] flex items-center gap-[clamp(0.25rem,1vw,0.5rem)]">
             <span className="w-[clamp(0.375rem,1vw,0.5rem)] h-[clamp(0.375rem,1vw,0.5rem)] rounded-full bg-[#00E599] animate-pulse"></span> AVAILABLE FOR DEPLOYMENT
           </div>
-          <h2 className="text-[clamp(2.5rem,6vw,4rem)] font-extrabold text-white tracking-tight leading-tight mb-[clamp(1rem,3vw,1.5rem)]">
+          <h2 className="text-[clamp(2.5rem,min(6vw,8vh),4rem)] font-extrabold text-white tracking-tight leading-tight mb-[clamp(0.75rem,min(2vw,3vh),1.5rem)]">
             Let's Build Something <span className="text-[#FF5722]">Great.</span>
           </h2>
           <p className="text-zinc-400 text-[clamp(0.875rem,2vw,1.125rem)] max-w-xl mx-auto leading-relaxed mb-[clamp(1.5rem,4vw,2.5rem)] font-sans">

@@ -116,14 +116,14 @@ const services = [
 export default function Services() {
   return (
     <PageTransition>
-      <div className="max-w-7xl mx-auto px-[clamp(0.25rem,2vw,1.5rem)] pt-[clamp(2rem,6vw,4rem)] pb-[clamp(4rem,10vw,8rem)] w-full">
+      <div className="max-w-7xl mx-auto px-[clamp(0.25rem,2vw,1.5rem)] pb-[clamp(2rem,min(6vw,6vh),8rem)] pt-[clamp(1rem,min(3vw,3vh),3rem)] w-full">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-[clamp(2rem,6vw,5rem)]"
+          className="max-w-3xl mb-[clamp(1.5rem,min(4vw,4vh),5rem)]"
         >
-          <h1 className="font-sans text-[clamp(2.5rem,6vw,5rem)] font-bold tracking-tight text-zinc-100 mb-[clamp(1rem,3vw,2rem)]">
+          <h1 className="font-sans text-[clamp(2.5rem,min(6vw,8vh),5rem)] font-bold tracking-tight text-zinc-100 mb-[clamp(0.5rem,min(2vw,2vh),2rem)]">
             Services <span className="text-[#FF5722]">.</span>
           </h1>
           <p className="text-zinc-400 font-sans text-[clamp(0.875rem,2vw,1.25rem)] leading-relaxed">
@@ -131,7 +131,7 @@ export default function Services() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 gap-[clamp(0.25rem,1.5vw,1rem)]">
+        <div className="grid grid-cols-2 gap-[clamp(0.25rem,min(1.5vw,2vh),1rem)]">
           {services.map((service, i) => (
             <motion.div 
               key={i} 
@@ -139,14 +139,14 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="p-[clamp(0.4rem,2vw,1.5rem)] border border-white/5 bg-[#1A1A1A] rounded-[clamp(0.5rem,3vw,1.5rem)] shadow-lg hover:shadow-orange-500/10 transition-all duration-300 group flex flex-col"
+              className="p-[clamp(0.4rem,min(2vw,2.5vh),1.5rem)] border border-white/5 bg-[#1A1A1A] rounded-[clamp(0.5rem,3vw,1.5rem)] shadow-lg hover:shadow-orange-500/10 transition-all duration-300 group flex flex-col"
             >
               <div className="transform group-hover:-translate-y-1 transition-transform duration-300">
                 {service.icon}
               </div>
-              <h3 className="font-sans text-[clamp(0.6rem,2.5vw,1.75rem)] font-bold text-zinc-100 mb-[clamp(0.25rem,2vw,1rem)] group-hover:text-orange-500 transition-colors leading-tight">{service.title}</h3>
+              <h3 className="font-sans text-[clamp(0.6rem,min(2.5vw,3vh),1.75rem)] font-bold text-zinc-100 mb-[clamp(0.25rem,min(1.5vw,1.5vh),1rem)] group-hover:text-orange-500 transition-colors leading-tight">{service.title}</h3>
               
-              <div className="flex-grow flex flex-col gap-[clamp(0.25rem,1.5vw,0.75rem)]">
+              <div className="flex-grow flex flex-col gap-[clamp(0.2rem,min(1vw,1vh),0.75rem)]">
                 <p className="text-zinc-400 font-sans leading-relaxed text-[clamp(0.45rem,1.5vw,1.125rem)]">
                   <strong className="text-zinc-200">Business:</strong> {service.businessPitch}
                 </p>
@@ -166,7 +166,7 @@ export default function Services() {
               </div>
 
               <div className="mt-auto">
-                <span className="bg-white/[0.03] border border-white/10 px-[clamp(0.25rem,1vw,0.75rem)] py-[clamp(0.05rem,0.5vw,0.25rem)] rounded-full text-[clamp(0.35rem,1vw,0.7rem)] font-mono text-zinc-400 tracking-wider inline-block mt-[clamp(0.5rem,3vw,1.5rem)] group-hover:border-orange-500/30 transition-colors">
+                <span className="bg-white/[0.03] border border-white/10 px-[clamp(0.25rem,1vw,0.75rem)] py-[clamp(0.05rem,0.5vw,0.25rem)] rounded-full text-[clamp(0.35rem,1vw,0.7rem)] font-mono text-zinc-400 tracking-wider inline-block mt-[clamp(0.25rem,min(2vw,2vh),1.5rem)] group-hover:border-orange-500/30 transition-colors">
                   {service.archetype}
                 </span>
               </div>
