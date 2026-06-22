@@ -139,13 +139,25 @@ export const projects = [
   {
     title: "Developer Portfolio: Institutional Grade UI",
     slug: "developer-portfolio",
-    techRibbon: "React 19 • Tailwind CSS • Framer Motion",
-    businessPitch: "A highly optimized, fully responsive developer portfolio engineered with a 'slim and smart' design philosophy, prioritizing high-fidelity aesthetics, fluid animations, and progressive disclosure.",
-    deliverables: [
-      "Fluid Viewport Scaling (vh/vw)",
-      "Framer Motion View Transitions",
-      "Zero-Clutter Component Architecture"
+    client: "Independent R&D",
+    location: "Distributed Edge Infrastructure",
+    duration: "Continuous Production Live",
+    role: "Lead Architect & UI Director",
+    techRibbon: "React 19 • Tailwind CSS v4 • Framer Motion",
+    overview: "Most developer portfolios suffer from extreme template bloat—cluttered with meaningless skill bars, bulky generic cards, and visual noise. I engineered this platform to strictly reject that standard. Built for elite hiring directors and technical founders, this digital monograph acts as an uncompromising proof of work. It prioritizes absolute visual clarity, sub-second navigation, and high-fidelity typography, ensuring that my engineering rigor is immediately felt before a single line of code is inspected.\n\nArchitecturally, the codebase is a masterclass in modern React topologies. It leverages dynamic React Router DOM rendering with a fully decoupled data layer, resolving `/portfolio/:slug` monographs autonomously. The UI utilizes mathematically precise CSS `clamp()` functions, guaranteeing unbreakable spatial integrity across any viewport without rigid media queries. Coupled with Framer Motion for hardware-accelerated entrance physics and a custom 70/30 asymmetrical grid, the system delivers raw performance without sacrificing a single pixel of aesthetic density.",
+    
+    keyFeatures: [
+      "Dynamic Routing Topology resolving automated /portfolio/:slug monographs",
+      "Two-Speed Copywriting Engine separating business value from hardcore technical specs",
+      "Fluid Viewport Physics utilizing pure CSS clamp() for unbreakable responsiveness",
+      "Hardware-Accelerated Framer Motion viewports for sub-10ms frame renders",
+      "Zero-Prop-Drilling architecture leveraging a centralized, decoupled data layer",
+      "Strict 'Slim & Smart' Institutional DOM Anatomy enforcing a 70/30 spatial grid"
     ],
-    ctaLabel: "Inspect Portfolio Source"
+    
+    techCloud: [
+      "React 19", "React Router", "Vite", "Tailwind CSS v4", "Framer Motion", "TypeScript", "Fluid Typography", "Edge Deployment"
+    ],
+    ctaLabel: "Inspect Monograph Source"
   }
 ];

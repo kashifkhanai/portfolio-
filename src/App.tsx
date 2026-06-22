@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'motion/react';
 import Navigation from './components/Navigation';
@@ -11,11 +12,20 @@ import ProjectDetails from './pages/ProjectDetails';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
+
 export default function App() {
   const location = useLocation();
 
   return (
     <div className="min-h-screen bg-[#111111] text-zinc-100 font-sans relative flex flex-col justify-between overflow-x-hidden grid-dots z-0">
+      <ScrollToTop />
       
       {/* Dark Theme Subtle Orbs (Optional, keeping it clean for now) */}
 
