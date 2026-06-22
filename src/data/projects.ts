@@ -2,16 +2,28 @@ export const projects = [
   {
     title: "PIMS: Enterprise Hospital Management System",
     slug: "pims-hospital-management",
-    techRibbon: "AdonisJS v6 • Relational MySQL • Strict TS",
-    businessPitch: "A rock-solid healthcare platform built to handle complex patient admissions, doctor schedules, and pharmacy ledgers instantly without ever slowing down or crashing.",
-    deliverables: [
-      "Strict ACID-Compliant 3NF Schemas",
-      "Compile-Time Validated DTO Ingress",
-      "Granular RBAC Permission Matrix"
+    client: "Experts Cloud Pvt Ltd",
+    location: "Lahore, Pakistan",
+    duration: "Nov 2025 — Jun 2026",
+    role: "Full-Stack Lead Architect",
+    techRibbon: "AdonisJS v6 • React.js • MySQL",
+    
+    // THE 2-SPEED OVERVIEW: Paragraph 1 for HR/Business, Paragraph 2 for CTO.
+    overview: "PIMS is an enterprise-grade hospital platform designed to manage the daily chaos of a busy medical facility. From the second a patient is admitted, to doctor scheduling, billing, and pharmacy dispatch, this system handles it all seamlessly. I took full end-to-end ownership of this product—building both the user-friendly screens that hospital staff interact with daily, and the powerful hidden engine that keeps sensitive patient data secure, organized, and instantly accessible.\n\nUnder the hood, I architected a highly decoupled system to ensure zero downtime. The backend is powered by AdonisJS v6 and a strictly normalized MySQL database, engineered to process hundreds of concurrent medical records without transaction deadlocks. On the client side, I deployed React 19 managed by Redux Toolkit state slices. This ensures that complex, multi-step workflows—like admitting a patient while simultaneously verifying pharmacy stock—feel instantaneous, strictly typed, and completely crash-proof.",
+    
+    keyFeatures: [
+      "End-to-End Patient Lifecycle (From Admissions to Final Discharge)",
+      "Automated Pharmacy Tracker with FIFO (First-In-First-Out) stock depletion",
+      "Strict Role-Based Access (RBAC) separating Doctors, Nurses, and Admins",
+      "Predictable and lightning-fast User Interface powered by Redux Toolkit",
+      "Highly secure, compile-time validated API endpoints (TypeScript DTOs)",
+      "Optimized MySQL Database designed to prevent multi-user data locks"
     ],
-    ctaLabel: "Inspect Enterprise Architecture"
+    techCloud: [
+      "React 19", "Redux Toolkit", "AdonisJS v6", "TypeScript", "MySQL", "Lucid ORM", "REST APIs", "JWT Auth", "Tailwind CSS"
+    ],
+    ctaLabel: "Inspect Product Case Study"
   },
-
   {
     title: "PIMS: Medical Supply & Inventory Core",
     slug: "pims-inventory-supply-chain",
