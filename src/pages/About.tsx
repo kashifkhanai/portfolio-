@@ -62,28 +62,28 @@ export default function About() {
 
   return (
     <PageTransition>
-      <div className="max-w-7xl mx-auto px-[clamp(0.25rem,2vw,2rem)] pt-[clamp(0.5rem,6vw,4rem)] pb-[clamp(1rem,10vw,8rem)] w-full">
+      <div className="max-w-7xl mx-auto px-[clamp(0.5rem,3vw,2rem)] pt-[clamp(0.5rem,2vh,2rem)] pb-[clamp(1rem,4vh,4rem)] w-full">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="min-h-[clamp(40vh,70vh,85vh)] flex flex-col justify-center pb-[clamp(0.5rem,4vw,3rem)] pt-[clamp(1rem,4vw,2rem)]"
+          className="min-h-[calc(100vh-6rem)] flex flex-col justify-center"
         >
-          <h1 className="font-sans text-[clamp(1.5rem,6vw,5rem)] font-bold tracking-tight text-zinc-100 mb-[clamp(0.5rem,4vw,3rem)]">
+          <h1 className="font-sans text-[clamp(1.5rem,5vw,5rem)] font-bold tracking-tight text-zinc-100 mb-[clamp(0.5rem,2vh,2rem)]">
             About <span className="text-orange-500">Me</span>
           </h1>
           
-          <div className="prose prose-invert max-w-none font-sans text-[clamp(0.55rem,2vw,1.125rem)] text-zinc-400 leading-relaxed">
-            <p className="mb-[clamp(0.5rem,3vw,1.5rem)] text-[clamp(0.65rem,2.5vw,1.5rem)] text-zinc-200 font-medium leading-snug">
+          <div className="prose prose-invert max-w-none font-sans text-[clamp(0.55rem,1.5vw,1.125rem)] text-zinc-400 leading-snug md:leading-relaxed">
+            <p className="mb-[clamp(0.5rem,2vh,1.5rem)] text-[clamp(0.65rem,2vw,1.5rem)] text-zinc-200 font-medium leading-tight md:leading-snug">
               Based in Lahore, Pakistan. I architect strict high-concurrency enterprise backends and interface low-latency Generative AI pipelines.
             </p>
-            <p className="mb-[clamp(0.5rem,3vw,1.5rem)]">
+            <p className="mb-[clamp(0.25rem,2vh,1.5rem)]">
               I am a Full-Stack Systems Engineer with an opinionated approach to web architecture. I specialize in the AdonisJS ecosystem, writing strictly type-safe TypeScript, and designing relational MySQL databases that maintain absolute data integrity under load. My frontend philosophy centers on predictable state topologies via Redux Toolkit atomic slices rather than chaotic prop-drilling.
             </p>
-            <p className="mb-[clamp(0.5rem,3vw,1.5rem)]">
+            <p className="mb-[clamp(0.25rem,2vh,1.5rem)]">
               Currently completing my BS in Artificial Intelligence, I treat AI as a core systems component rather than a generic third-party wrapper. By embedding custom Computer Vision (YOLOv8) models and streaming Large Language Models directly into backend event loops, I bridge the gap between heavy data science and lightweight human interfaces.
             </p>
-            <p className="border-l-2 border-orange-500 pl-[clamp(0.5rem,3vw,1.5rem)] my-[clamp(0.75rem,4vw,2rem)] text-zinc-300 italic text-[clamp(0.5rem,2vw,1.125rem)]">
+            <p className="border-l-2 border-orange-500 pl-[clamp(0.5rem,2vw,1.5rem)] my-[clamp(0.5rem,2vh,2rem)] text-zinc-300 italic text-[clamp(0.5rem,1.5vw,1.125rem)]">
               <strong>The Consolidation Advantage:</strong> I am a one-person full-stack team operating as an end-to-end solo delivery unit. You do not need to coordinate a separate database architect, an AdonisJS backend dev, a React state engineer, a WordPress specialist, a DevOps person, and a Python AI researcher to ship a feature. I own the relational schema, the API ingress, the client DOM diffing, and the inference stream. I have done that consolidation on 30+ client projects, and the fewer hand-offs, the faster (and cheaper) the project ships.
             </p>
           </div>
