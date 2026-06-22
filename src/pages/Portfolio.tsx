@@ -60,7 +60,7 @@ export default function Portfolio() {
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-2 gap-[clamp(0.5rem,min(2vw,3vh),2rem)]">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-[clamp(0.5rem,min(2vw,3vh),2rem)]">
           {projects.slice(1).map((project, i) => (
             <motion.div 
               key={i} 
@@ -74,7 +74,7 @@ export default function Portfolio() {
                 to={`/portfolio/${project.slug}`}
                 className="flex w-full h-full bg-[#0F131E] border border-white/10 rounded-[clamp(1rem,3vw,1.5rem)] overflow-hidden group hover:border-[#FF5722] transition-all duration-300 flex-col"
               >
-                <div className="aspect-[2/1] bg-zinc-900/40 relative overflow-hidden border-b border-white/5">
+                <div className="aspect-[2.5/1] bg-zinc-900/40 relative overflow-hidden border-b border-white/5">
                   <img 
                     src={`/projects/${project.slug}.png`} 
                     alt={project.title} 
@@ -86,14 +86,14 @@ export default function Portfolio() {
                   />
                 </div>
 
-                <div className="p-[clamp(0.75rem,2vw,1.5rem)] flex flex-col flex-grow w-full">
-                  <span className="text-[clamp(0.45rem,1.2vw,0.75rem)] font-mono font-bold text-[#FF5722] tracking-widest uppercase mb-[clamp(0.25rem,1vw,0.5rem)]">{project.techRibbon}</span>
-                  <h3 className="text-[clamp(0.75rem,1.5vw,1.25rem)] font-extrabold text-white mb-[clamp(0.25rem,1vw,0.5rem)] tracking-tight group-hover:text-[#FF5722] transition-colors leading-tight">{project.title}</h3>
-                  <p className="text-[clamp(0.5rem,1.2vw,0.875rem)] text-zinc-400 font-sans leading-snug mb-[clamp(0.5rem,1.5vw,1rem)] line-clamp-2">{project.businessPitch}</p>
+                <div className="p-[clamp(0.5rem,min(1.5vw,2vh),1.25rem)] flex flex-col flex-grow w-full">
+                  <span className="text-[clamp(0.5rem,min(1.5vw,1.8vh),0.85rem)] font-mono font-bold text-[#FF5722] tracking-widest uppercase mb-[clamp(0.25rem,1vw,0.5rem)]">{project.techRibbon}</span>
+                  <h3 className="text-[clamp(0.9rem,min(1.8vw,2.5vh),1.375rem)] font-extrabold text-white mb-[clamp(0.2rem,min(1vw,1.5vh),0.5rem)] tracking-tight group-hover:text-[#FF5722] transition-colors leading-tight">{project.title}</h3>
+                  <p className="text-[clamp(0.7rem,min(1.5vw,2vh),1.1rem)] text-zinc-400 font-sans leading-snug mb-[clamp(0.5rem,1.5vw,1rem)] line-clamp-2">{project.businessPitch}</p>
 
                   <ul className="space-y-[clamp(0.1rem,0.5vw,0.25rem)] border-l-2 border-[#FF5722]/30 pl-[clamp(0.25rem,1vw,0.5rem)] mt-auto">
                     {project.deliverables.map((item, idx) => (
-                      <li key={idx} className="text-[clamp(0.45rem,1vw,0.75rem)] font-mono text-zinc-400 flex items-center gap-[clamp(0.25rem,1vw,0.5rem)]">
+                      <li key={idx} className="text-[clamp(0.6rem,min(1.2vw,1.8vh),1rem)] font-mono text-zinc-400 flex items-center gap-[clamp(0.25rem,1vw,0.5rem)]">
                         <span className="text-[#FF5722] shrink-0">▹</span> <span className="truncate">{item}</span>
                       </li>
                     ))}

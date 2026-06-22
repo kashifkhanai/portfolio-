@@ -11,6 +11,32 @@ export const projects = [
     ],
     ctaLabel: "Inspect Enterprise Architecture"
   },
+
+  {
+    title: "PIMS: Medical Supply & Inventory Core",
+    slug: "pims-inventory-supply-chain",
+    techRibbon: "AdonisJS v6 • Double-Entry SQL • Cron Ingress",
+    businessPitch: "An automated pharmacy and medical supply tracker that prevents hospitals from running out of life-saving drugs while strictly catching expired stock before it hits patients.",
+    deliverables: [
+      "Double-Entry Batch Stock Ledgers",
+      "Automated FIFO Stock Depletion",
+      "High-Concurrency Transaction Locks"
+    ],
+    ctaLabel: "Inspect Inventory Specs"
+  },
+  {
+    title: "Job Tracker: Role-Based Job Portal API",
+    slug: "job-tracker-api",
+    techRibbon: "FastAPI • MongoDB (Motor) • PyJWT",
+    businessPitch: "A highly secure, async backend system enabling distinct user roles (Seekers, Employers, Admins) to manage and filter job postings with strict JWT authentication.",
+    deliverables: [
+      "OAuth2 + JWT Authorization",
+      "Async MongoDB Integrations",
+      "Pydantic Validation Schemas"
+    ],
+    ctaLabel: "Inspect Backend Architecture"
+  },
+
   {
     title: "Flux Trade Engine: Live Order Book",
     slug: "flux-trade-engine",
@@ -23,6 +49,19 @@ export const projects = [
     ],
     ctaLabel: "Inspect Streaming Architecture"
   },
+  {
+    title: "Gemini AI ChatBot: Real-Time WebSockets",
+    slug: "gemini-ai-chatbot",
+    techRibbon: "FastAPI • WebSockets • Google GenAI",
+    businessPitch: "A real-time, low-latency AI chatbot that streams intelligent responses directly to a modern UI using WebSockets and the Gemini 2.0 Flash Lite model.",
+    deliverables: [
+      "Real-Time WebSocket Streaming",
+      "Gemini 2.0 Flash Integration",
+      "Markdown Syntax Rendering"
+    ],
+    ctaLabel: "Inspect AI Architecture"
+  },
+
   {
     title: "Smart City Spatial Anomaly AI",
     slug: "smart-city-spatial-ai",
@@ -47,6 +86,32 @@ export const projects = [
     ],
     ctaLabel: "Inspect Data Pipeline Specs"
   },
+
+  {
+    title: "YouTube Downloader: Media Engine",
+    slug: "youtube-video-downloader",
+    techRibbon: "Flask • yt-dlp • Server-Sent Events",
+    businessPitch: "A professional, browser-based media pipeline featuring real-time progress tracking, pause/resume controls, and persistent bulk task management for large playlists.",
+    deliverables: [
+      "Real-Time SSE Progress Streams",
+      "yt-dlp Multi-Threading Core",
+      "Persistent JSON Task Stores"
+    ],
+    ctaLabel: "Inspect Downloader Architecture"
+  },
+  {
+    title: "AI Lead Scorer: Priority Inbox Engine",
+    slug: "ai-lead-scorer",
+    techRibbon: "React 19 • Redux Toolkit • Tailwind CSS",
+    businessPitch: "An enterprise-grade frontend application that empowers sales teams to ingest raw CSV data and automatically prioritize leads using custom Ideal Customer Profiles and AI scoring.",
+    deliverables: [
+      "Redux Toolkit State Topologies",
+      "Client-Side CSV Parsing",
+      "Dynamic Client-Side Filtering"
+    ],
+    ctaLabel: "Inspect Frontend Architecture"
+  },
+
   {
     title: "PrimeVest: Luxury Real Estate Portal",
     slug: "primevest-luxury-portal",
@@ -58,5 +123,17 @@ export const projects = [
       "Frictionless Spatial Walkthroughs"
     ],
     ctaLabel: "Inspect UI/UX Topologies"
+  },
+  {
+    title: "Developer Portfolio: Institutional Grade UI",
+    slug: "developer-portfolio",
+    techRibbon: "React 19 • Tailwind CSS • Framer Motion",
+    businessPitch: "A highly optimized, fully responsive developer portfolio engineered with a 'slim and smart' design philosophy, prioritizing high-fidelity aesthetics, fluid animations, and progressive disclosure.",
+    deliverables: [
+      "Fluid Viewport Scaling (vh/vw)",
+      "Framer Motion View Transitions",
+      "Zero-Clutter Component Architecture"
+    ],
+    ctaLabel: "Inspect Portfolio Source"
   }
 ];
